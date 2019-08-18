@@ -1,0 +1,34 @@
+Autoprefixer CLI
+Usage:   autoprefixer-cli -o main.prefixed.css main.css    [autoprefixer-cli -o style.prefixed.css style.css]
+See full documentation by:   autoprefixer-cli -h
+
+nu-html-checker
+Usage: cli [options] <files/urls ...>
+
+  Options:
+
+    -h, --help                   output usage information
+    -V, --version                output the version number
+    -f, --formatter <formatter>  Choose the formatter to use. (stylish, json)
+
+checker.validate(list, options)
+
+- api String The root URL for the endpoint to use (default: https://validator.nu/)
+- level Boolean If set to false, then all messages will be returned (default: only errors)
+- formatter String Must correspond to a named formatter (see below)
+
+var checker = require('nu-html-checker');
+ 
+var batch = checker.validate([ 'test.html', 'http://google.com' ]);
+ 
+batch.on('progress', function (e) {
+  console.log(checker.format('stylish', e.value), '\n');
+});
+ 
+batch.on('end', function (err) {
+  if (err) console.error(err.stack);
+})
+
+var checker = require('nu-html-checker');
+var bath = checker.validate([ 'index.html]);
+batch.end(callback)
