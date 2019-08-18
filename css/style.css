@@ -10,3 +10,7 @@ p {
 p:last-of-type {
   font-style: italic;
 }
+.sadnes {
+  color: red;
+  font-size: 25px;
+}
