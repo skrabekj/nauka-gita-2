@@ -30,5 +30,5 @@ batch.on('end', function (err) {
 })
 
 var checker = require('nu-html-checker');
-var bath = checker.validate([ 'index.html]);
+var bath = checker.validate([ 'index.html' ]);
 batch.end(callback)
