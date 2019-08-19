@@ -1,0 +1,16 @@
+body {
+  text-align: center;
+}
+h3 {
+  font-style: italic;
+}
+p {
+  margin-bottom: 40px;
+}
+p:last-of-type {
+  font-style: italic;
+}
+.sadnes {
+  color: red;
+  font-size: 25px;
+}
